@@ -1,50 +1,90 @@
-<p align="center" width="100%">
-  <img 
-  width="50%" 
-  src="https://user-images.githubusercontent.com/113546603/234576085-320f56f5-633a-4334-89e0-97176d8eb05a.png" />
-</p>
+1. **`git init`**  
+   Inicializa um repositório Git em um diretório. Usado uma vez ao começar um novo projeto para criar o repositório local.
+   - Exemplo:
+     ```bash
+     git init
+     ```
 
-## GIT INIT
-O comando "git init" cria um novo repositório Git em um diretório existente. Ele cria um novo subdiretório oculto chamado ".git" que contém todos os arquivos necessários para controlar as versões dos arquivos no repositório.
+2. **`git clone`**  
+   Clona (copia) um repositório remoto para o ambiente local.
+   - Exemplo:
+     ```bash
+     git clone https://github.com/usuario/repo.git
+     ```
 
-![image](https://user-images.githubusercontent.com/113546603/234579075-2301c361-3aa9-43a7-9364-102e73aea3e2.png)
+3. **`git add`**  
+   Adiciona arquivos ao estágio (área de preparação) antes do commit. Usado para selecionar arquivos que serão incluídos no próximo commit.
+   - Exemplo:
+     ```bash
+     git add arquivo.txt
+     ```
 
-## GIT STATUS
-O comando "git status" exibe o status atual do repositório Git, mostrando quais arquivos foram modificados, adicionados ou excluídos desde a última atualização do repositório. Ele também mostra arquivos que estão em conflito e outros detalhes sobre o estado atual do repositório.
+4. **`git commit`**  
+   Cria um ponto de salvamento com as mudanças da área de preparação. É essencial adicionar uma mensagem descritiva com `-m`.
+   - Exemplo:
+     ```bash
+     git commit -m "Mensagem do commit"
+     ```
 
-![image](https://user-images.githubusercontent.com/113546603/234579953-97d24514-139a-4c27-83ef-fac87279a8a7.png)
+5. **`git status`**  
+   Mostra o status dos arquivos no repositório, indicando quais arquivos foram modificados, adicionados ou estão prontos para commit.
+   - Exemplo:
+     ```bash
+     git status
+     ```
 
-No momento que criarmos um arquivo dentro do repositório Git, o "git status" demonstrará que existem arquivos a serem adicionados para serem commitados.
+6. **`git log`**  
+   Exibe o histórico de commits do repositório, com detalhes como autor, data e mensagem do commit.
+   - Exemplo:
+     ```bash
+     git log
+     ```
 
-![image](https://user-images.githubusercontent.com/113546603/234580959-2e75ea69-a7e0-4c55-8fec-1133f39aa724.png)
+7. **`git branch`**  
+   Cria, lista ou exclui branches no repositório. Um branch permite que você trabalhe em uma linha separada de desenvolvimento.
+   - Exemplo para criar um branch:
+     ```bash
+     git branch nome-do-branch
+     ```
 
-Nesse caso, foi adicionado o arquivo "readme.txt"
+8. **`git checkout`**  
+   Permite alternar entre branches ou restaurar arquivos do histórico de commits.
+   - Exemplo para trocar de branch:
+     ```bash
+     git checkout nome-do-branch
+     ```
 
-## GIT ADD
-O comando "git add" é utilizado para adicionar arquivos ao índice do Git. Os arquivos adicionados são preparados para serem incluídos no próximo commit.
+9. **`git merge`**  
+   Une as mudanças de um branch ao branch ativo. Normalmente usado para unir um branch de feature ao branch principal.
+   - Exemplo:
+     ```bash
+     git merge nome-do-branch
+     ```
 
-![image](https://user-images.githubusercontent.com/113546603/234583720-41de80d7-576a-4b60-906f-f73f6d93ff4d.png)
+10. **`git pull`**  
+    Atualiza o repositório local com as últimas mudanças do repositório remoto.
+    - Exemplo:
+      ```bash
+      git pull origin main
+      ```
 
-## GIT COMMIT
-O comando "git commit" é utilizado para criar um novo commit no repositório Git com as alterações que foram adicionadas ao índice. O commit inclui uma mensagem que descreve as alterações que foram feitas **-m "mensagem do commit"**.
+11. **`git push`**  
+    Envia commits do repositório local para o repositório remoto.
+    - Exemplo:
+      ```bash
+      git push origin main
+      ```
 
-![image](https://user-images.githubusercontent.com/113546603/234584310-3f608c0c-9636-4355-92b0-afd2bcb2a235.png)
+12. **`git stash`**  
+    Salva temporariamente as mudanças do seu ambiente de trabalho para você poder trabalhar em outra tarefa e depois restaurá-las.
+    - Exemplo:
+      ```bash
+      git stash
+      ```
 
-## GIT LOG
-O comando "git log" exibe um histórico detalhado dos commits que foram feitos no repositório Git, incluindo as mensagens de commit, os autores, as datas e os hash dos commits.
-
-![image](https://user-images.githubusercontent.com/113546603/234589567-69660636-5e13-4d76-85af-9cb2ba4de26f.png)
-
-## GITK
-O comando "gitk" é uma ferramenta gráfica para visualizar o histórico de commits em um repositório Git. Ele permite visualizar as alterações feitas em cada commit e navegar pelo histórico do repositório de forma interativa.
-
-![image](https://user-images.githubusercontent.com/113546603/234591965-e5d24c5c-57b3-43e9-9cd4-9a7ccd78d44d.png)
-
-##GIT COMMIT --AMEND
-O comando "git commit --amend" é utilizado para modificar o commit mais recente no repositório Git. Ele permite adicionar ou remover arquivos do commit, alterar a mensagem do commit ou modificar outros detalhes. Ele também pode ser usado para corrigir erros em um commit anterior.
-
-## GIT RESET
-O comando "git reset" é utilizado para desfazer alterações em um repositório Git. Ele pode ser usado para desfazer o último commit, para remover arquivos ou para mover o HEAD (ponteiro que aponta para a última confirmação) para um commit anterior.
-
-![image](https://user-images.githubusercontent.com/113546603/234594925-bff41d81-7734-4599-af92-428ba43a75fe.png)
-
+13. **`git diff`**  
+    Mostra as diferenças entre arquivos no repositório. Útil para ver o que foi modificado antes de um commit.
+    - Exemplo:
+      ```bash
+      git diff
+      ```
